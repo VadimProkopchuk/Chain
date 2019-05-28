@@ -16,7 +16,7 @@ private:
 
 		if (!_board->make_move(active)) {
 
-			cout << "Player " << active->getName() << " finished game." << endl;
+			cout << "Player " << active->getName() << " finished the game." << endl;
 			return true;
 		}
 
@@ -57,7 +57,7 @@ public:
 	}
 
 	static void author() {
-		cout << "Powered by Vadim Prokopchuk." << endl;
+		cout << "Created by Vadim Prokopchuk." << endl;
 	}
 };
 

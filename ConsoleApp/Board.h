@@ -171,19 +171,6 @@ private:
 		return false;
 	}
 
-
-	bool available_for_changes() {
-		for (int i = 0; i < _size; i++) {
-			for (int j = 0; j < _size; j++) {
-				if (_board[i][j] == WHITE) {
-					return true;
-				}
-			}
-		}
-
-		return false;
-	}
-
 	void render_board() {
 		cout << endl << "    ";
 		for (int i = 0; i < _size; i++) {
@@ -316,7 +303,7 @@ public:
 			commit(player->getCellType());
 		}
 
-		return available_for_changes();
+		return find_cell();
 	}
 
 	bool check_way(Player* player) {
